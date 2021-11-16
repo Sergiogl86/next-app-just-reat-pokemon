@@ -23,7 +23,6 @@ export async function getStaticProps() {
     return {
       props: {
         pokemonsList,
-        fallback: true,
       },
       revalidate: 20,
     };
