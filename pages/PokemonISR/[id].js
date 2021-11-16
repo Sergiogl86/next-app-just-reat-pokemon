@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const pokemonSSRDetalle = ({ pokemonDetalle }) => {
+const pokemonISRDetalle = ({ pokemonDetalle }) => {
   return (
     <>
       <h1>Detalles:</h1>
@@ -44,4 +44,4 @@ export async function getStaticPaths() {
   }
 }
 
-export default pokemonSSRDetalle;
+export default pokemonISRDetalle;
