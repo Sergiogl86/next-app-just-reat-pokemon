@@ -16,7 +16,7 @@ const pokemonSSR = ({ pokemonsList }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const apiPokemons = "https://week-3-challenge-api.herokuapp.com/pokemon/";
   try {
     const { data: pokemonsList } = await axios.get(apiPokemons);
@@ -29,9 +29,6 @@ export async function getStaticProps() {
     console.log(error);
     return;
   }
-
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
 }
 
 export default pokemonSSR;
