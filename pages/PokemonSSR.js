@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const pokemonSSR = ({ pokemonsList }) => {
+export const pokemonSSR = ({ pokemonsList }) => {
   return (
     <>
       <h1>Pokémon SSR</h1>
@@ -30,5 +30,3 @@ export async function getServerSideProps() {
     return;
   }
 }
-
-export default pokemonSSR;
