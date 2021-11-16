@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const pokemonSSR = ({ pokemonDetalle }) => {
+const pokemonSSRDetalle = ({ pokemonDetalle }) => {
   return (
     <>
       <h1>Detalles:</h1>
@@ -30,4 +30,4 @@ export async function getServerSideProps({ params }) {
   }
 }
 
-export default pokemonSSR;
+export default pokemonSSRDetalle;
