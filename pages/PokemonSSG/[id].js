@@ -14,6 +14,20 @@ const pokemonSSGDetalle = ({ pokemonDetalle }) => {
   );
 };
 
+export async function getStaticPaths() {
+  const apiPokemons = "https://week-3-challenge-api.herokuapp.com/pokemon/";
+  try {
+    const { data: pokemonsList } = await axios.get(apiPokemons);
+    const paths = pokemonsList.map((pokemon) => ({
+      params: { id: `${pokemon.id}` },
+    }));
+    return { paths, fallback: false };
+  } catch (error) {
+    console.log(error);
+    return;
+  }
+}
+
 export async function getStaticProps({ params }) {
   const apiPokemons = `https://week-3-challenge-api.herokuapp.com/pokemon/${params.id}`;
   try {
@@ -24,20 +38,6 @@ export async function getStaticProps({ params }) {
         pokemonDetalle,
       },
     };
-  } catch (error) {
-    console.log(error);
-    return;
-  }
-}
-
-export async function getStaticPaths() {
-  const apiPokemons = "https://week-3-challenge-api.herokuapp.com/pokemon/";
-  try {
-    const { data: pokemonsList } = await axios.get(apiPokemons);
-    const paths = pokemonsList.map((pokemon) => ({
-      params: { id: `${pokemon.id}` },
-    }));
-    return { paths, fallback: false };
   } catch (error) {
     console.log(error);
     return;
