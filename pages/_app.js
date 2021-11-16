@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
             <a href="/PokemonSSG">Mis pokémon SSG</a>
           </li>
           <li>
-            <a href="/PokemonISR">Mis pokémon ISR</a>
+            <a href="/PokemonISR">Mis pokémon ISR </a>
           </li>
         </ul>
       </nav>
