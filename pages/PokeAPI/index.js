@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const PokeAPI = () => {
+const pokeAPI = () => {
   const [pokemonsList, setPokemonsList] = useState([]);
   const pokeAPIUrl = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=10";
 
@@ -34,4 +34,4 @@ const PokeAPI = () => {
   );
 };
 
-export default PokeAPI;
+export default pokeAPI;

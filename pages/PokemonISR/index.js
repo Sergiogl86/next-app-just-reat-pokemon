@@ -8,7 +8,7 @@ const pokemonISR = ({ pokemonsList }) => {
         {pokemonsList.map((pokemon) => (
           <li key={pokemon.id}>
             <h2>{`Name: ${pokemon.name}`}</h2>
-            <a href={`/PokemonISR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
+            <a href={`/pokemonISR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
           </li>
         ))}
       </ul>

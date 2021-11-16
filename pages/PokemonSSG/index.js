@@ -8,7 +8,7 @@ const pokemonSSG = ({ pokemonsList }) => {
         {pokemonsList.map((pokemon) => (
           <li key={pokemon.id}>
             <h2>{`Name: ${pokemon.name}`}</h2>
-            <a href={`/PokemonSSG/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
+            <a href={`/pokemonSSG/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
           </li>
         ))}
       </ul>

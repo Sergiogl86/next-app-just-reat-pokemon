@@ -9,16 +9,16 @@ function MyApp({ Component, pageProps }) {
             <a href="/">Home!</a>
           </li>
           <li>
-            <a href="/PokeAPI">Pokémons: PokeAPI</a>
+            <a href="/pokeAPI">Pokémons: PokeAPI</a>
           </li>
           <li>
-            <a href="/PokemonSSR">Mis pokémon SSR</a>
+            <a href="/pokemonSSR">Mis pokémon SSR</a>
           </li>
           <li>
-            <a href="/PokemonSSG">Mis pokémon SSG</a>
+            <a href="/pokemonSSG">Mis pokémon SSG</a>
           </li>
           <li>
-            <a href="/PokemonISR">Mis pokémon ISR </a>
+            <a href="/pokemonISR">Mis pokémon ISR </a>
           </li>
         </ul>
       </nav>
