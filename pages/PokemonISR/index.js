@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const pokemonSSG = ({ pokemonsList }) => {
+const pokemonISR = ({ pokemonsList }) => {
   return (
     <>
-      <h1>Pokémon SSG</h1>
+      <h1>Pokémon ISR</h1>
       <ul>
         {pokemonsList.map((pokemon) => (
           <li key={pokemon.id}>
             <h2>{`Name: ${pokemon.name}`}</h2>
-            <h2>{`URL: ${pokemon.url}`}</h2>
+            <a href={`/PokemonISR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
           </li>
         ))}
       </ul>
@@ -24,6 +24,7 @@ export async function getStaticProps() {
       props: {
         pokemonsList,
       },
+      revalidate: 20,
     };
   } catch (error) {
     console.log(error);
@@ -31,4 +32,4 @@ export async function getStaticProps() {
   }
 }
 
-export default pokemonSSG;
+export default pokemonISR;
