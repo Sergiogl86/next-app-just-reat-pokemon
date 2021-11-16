@@ -8,7 +8,7 @@ const pokemonSSR = ({ pokemonsList }) => {
         {pokemonsList.map((pokemon) => (
           <li key={pokemon.id}>
             <h2>{`Name: ${pokemon.name}`}</h2>
-            <h2>{`URL: ${pokemon.url}`}</h2>
+            <a href={`/PokemonSSR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
           </li>
         ))}
       </ul>
@@ -16,7 +16,7 @@ const pokemonSSR = ({ pokemonsList }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const apiPokemons = "https://week-3-challenge-api.herokuapp.com/pokemon/";
   try {
     const { data: pokemonsList } = await axios.get(apiPokemons);
