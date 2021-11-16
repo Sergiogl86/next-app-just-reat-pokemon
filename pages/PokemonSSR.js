@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const pokemonSSR = ({ pokemonsList }) => {
+const pokemonSSR = ({ pokemonsList }) => {
   return (
     <>
       <h1>Pokémon SSR</h1>
@@ -16,7 +16,7 @@ export const pokemonSSR = ({ pokemonsList }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const apiPokemons = "https://week-3-challenge-api.herokuapp.com/pokemon/";
   try {
     const { data: pokemonsList } = await axios.get(apiPokemons);
@@ -30,3 +30,5 @@ export async function getServerSideProps() {
     return;
   }
 }
+
+export default pokemonSSR;

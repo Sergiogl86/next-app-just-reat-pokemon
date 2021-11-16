@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const pokemonSSG = ({ pokemonsList }) => {
+const pokemonSSG = ({ pokemonsList }) => {
   return (
     <>
       <h1>Pokémon SSG</h1>
@@ -30,3 +30,5 @@ export async function getStaticProps() {
     return;
   }
 }
+
+export default pokemonSSG;
