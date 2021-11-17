@@ -6,7 +6,7 @@ const PokemonISRDetalle = ({ pokemonDetalle }) => {
     <>
       <h1>Detalles:</h1>
 
-      {pokemonDetalle ? (
+      {pokemonDetalle.name ? (
         <>
           <h2>{`Name: ${pokemonDetalle.name}`}</h2>
           <img
