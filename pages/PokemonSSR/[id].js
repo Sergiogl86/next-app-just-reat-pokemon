@@ -1,15 +1,21 @@
 import axios from "axios";
+import Loading from "./../../src/components/Loading/Loading";
 
-const pokemonSSRDetalle = ({ pokemonDetalle }) => {
+const PokemonSSRDetalle = ({ pokemonDetalle }) => {
   return (
     <>
       <h1>Detalles:</h1>
-
-      <h2>{`Name: ${pokemonDetalle.name}`}</h2>
-      <img
-        src={pokemonDetalle.sprites.other.dream_world.front_default}
-        alt={`imagen-${pokemonDetalle.name}`}
-      />
+      {pokemonDetalle ? (
+        <>
+          <h2>{`Name: ${pokemonDetalle.name}`}</h2>
+          <img
+            src={pokemonDetalle.sprites.other.dream_world.front_default}
+            alt={`imagen-${pokemonDetalle.name}`}
+          />
+        </>
+      ) : (
+        <Loading />
+      )}
     </>
   );
 };
@@ -30,4 +36,4 @@ export async function getServerSideProps({ params }) {
   }
 }
 
-export default pokemonSSRDetalle;
+export default PokemonSSRDetalle;
