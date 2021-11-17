@@ -1,17 +1,22 @@
 import axios from "axios";
+import Loading from "./../../src/components/Loading/Loading";
 
-const pokemonSSR = ({ pokemonsList }) => {
+const PokemonSSR = ({ pokemonsList }) => {
   return (
     <>
       <h1>Pokémon SSR</h1>
-      <ul>
-        {pokemonsList.map((pokemon) => (
-          <li key={pokemon.id}>
-            <h2>{`Name: ${pokemon.name}`}</h2>
-            <a href={`/pokemonSSR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
-          </li>
-        ))}
-      </ul>
+      {pokemonsList ? (
+        <ul>
+          {pokemonsList.map((pokemon) => (
+            <li key={pokemon.id}>
+              <h2>{`Name: ${pokemon.name}`}</h2>
+              <a href={`/pokemonSSR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <Loading />
+      )}
     </>
   );
 };
@@ -31,4 +36,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default pokemonSSR;
+export default PokemonSSR;

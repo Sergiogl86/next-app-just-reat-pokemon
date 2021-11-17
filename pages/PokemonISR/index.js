@@ -1,17 +1,22 @@
 import axios from "axios";
+import Loading from "./../../src/components/Loading/Loading";
 
-const pokemonISR = ({ pokemonsList }) => {
+const PokemonISR = ({ pokemonsList }) => {
   return (
     <>
       <h1>Pokémon ISR</h1>
-      <ul>
-        {pokemonsList.map((pokemon) => (
-          <li key={pokemon.id}>
-            <h2>{`Name: ${pokemon.name}`}</h2>
-            <a href={`/pokemonISR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
-          </li>
-        ))}
-      </ul>
+      {pokemonsList ? (
+        <ul>
+          {pokemonsList.map((pokemon) => (
+            <li key={pokemon.id}>
+              <h2>{`Name: ${pokemon.name}`}</h2>
+              <a href={`/pokemonISR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <Loading />
+      )}
     </>
   );
 };
@@ -32,4 +37,4 @@ export async function getStaticProps() {
   }
 }
 
-export default pokemonISR;
+export default PokemonISR;
