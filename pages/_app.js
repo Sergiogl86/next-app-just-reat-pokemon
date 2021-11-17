@@ -7,19 +7,19 @@ function MyApp({ Component, pageProps }) {
       <nav>
         <ul>
           <li>
-            <Link href="/">Home!</Link>
+            <Link href="/"># Home!</Link>
           </li>
           <li>
-            <Link href="/pokeAPI">Pokémons: PokeAPI</Link>
+            <Link href="/pokeAPI"># Pokémons: PokeAPI</Link>
           </li>
           <li>
-            <Link href="/pokemonSSR">Mis pokémon SSR</Link>
+            <Link href="/pokemonSSR"># Mis pokémon SSR</Link>
           </li>
           <li>
-            <Link href="/pokemonSSG">Mis pokémon SSG</Link>
+            <Link href="/pokemonSSG"># Mis pokémon SSG</Link>
           </li>
           <li>
-            <Link href="/pokemonISR">Mis pokémon ISR </Link>
+            <Link href="/pokemonISR"># Mis pokémon ISR </Link>
           </li>
         </ul>
       </nav>
