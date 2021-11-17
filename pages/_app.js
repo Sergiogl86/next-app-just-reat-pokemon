@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -6,19 +7,19 @@ function MyApp({ Component, pageProps }) {
       <nav>
         <ul>
           <li>
-            <a href="/">Home!</a>
+            <Link href="/">Home!</Link>
           </li>
           <li>
-            <a href="/pokeAPI">Pokémons: PokeAPI</a>
+            <Link href="/pokeAPI">Pokémons: PokeAPI</Link>
           </li>
           <li>
-            <a href="/pokemonSSR">Mis pokémon SSR</a>
+            <Link href="/pokemonSSR">Mis pokémon SSR</Link>
           </li>
           <li>
-            <a href="/pokemonSSG">Mis pokémon SSG</a>
+            <Link href="/pokemonSSG">Mis pokémon SSG</Link>
           </li>
           <li>
-            <a href="/pokemonISR">Mis pokémon ISR </a>
+            <Link href="/pokemonISR">Mis pokémon ISR </Link>
           </li>
         </ul>
       </nav>
