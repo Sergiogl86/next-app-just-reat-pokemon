@@ -1,5 +1,6 @@
 import axios from "axios";
 import Loading from "./../../src/components/Loading/Loading";
+import Link from "next/link";
 
 const PokemonSSR = ({ pokemonsList }) => {
   return (
@@ -10,7 +11,13 @@ const PokemonSSR = ({ pokemonsList }) => {
           {pokemonsList.map((pokemon) => (
             <li key={pokemon.id}>
               <h2>{`Name: ${pokemon.name}`}</h2>
-              <a href={`/pokemonSSR/${pokemon.id}`}>{`URL: ${pokemon.url}`}</a>
+              <Link
+                href={`/pokemonSSR/${pokemon.id}`}
+                key={pokemon.name}
+                passHref
+              >
+                {`URL: ${pokemon.url}`}
+              </Link>
             </li>
           ))}
         </ul>
